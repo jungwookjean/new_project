@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta charset="utf-8">
+<head>
+<title>(주)화진티엔아이 통합방재시스템 지도상황판</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+  DD_belatedPNG.fix('img, .png_bg');
+</script>
+<![endif]-->
+<!--이미지롤오버 스크립트-->
+<script type="text/javascript"> 
+ $(document).ready(function() { $("img.rollover").hover( function() { this.src = this.src.replace("_off", "_on"); }, function() { this.src = this.src.replace("_on", "_off"); }); }); 
+</script>
+<!--이미지롤오버스크립트 end-->
+<!--슬라이딩메뉴 스크립트-->
+<script>
+$(document).ready(function() {
+    $('#slider_forec').sidr({
+      name: 'con_forec',
+      source: '#con_forec'
+    });
+});
+$(document).ready(function() {
+    $('#slider_nowr').sidr({
+      name: 'con_nowr',
+      source: '#con_nowr'
+    });
+});
+</script>
+<!--슬라이딩메뉴 스크립트 end-->"
+</head>
+<body>
+<div id="wrapper">
+<div id="top">
+<div id="title"><img src="images/main_title.png" alt="메인타이틀" /></div>
+<div class="date">2015년 07월 16일 11시10분 현재</div>
+<div class="logo"><img src="images/main_logo.png" alt="메인로고" /></div>
+</div>
+<div id="left_sidebar">
+<a id="slider_forec" href="#con_forec"><img src="images/leftnav_01_off.jpg" class="rollover" alt="예보"></a>
+<a id="slider_nowr" href="#con_nowr"><img src="images/leftnav_02_off.jpg" class="rollover" alt="강우현황"></a>
+</div>
+
+<div id="con_forec" style="z-index:10">
+<?php include 'test.html'; ?>
+</div>
+<div id="con_nowr" style="z-index:10">
+<?php include 'test1.html'; ?>
+</div>
+
+<div id="con">
+지도 표출부분
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

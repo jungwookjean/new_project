@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+/*글로벌 스타일*/
+* html body{padding: 0; font-family: '맑은 고딕','돋움','dotum','sans-serif'; }/*IE6 hack*/
+* html #wrapper{height: 100%;width: 100%;} /*IE6 hack*/
+html {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; }
+*, *:before, *:after {-webkit-box-sizing: inherit;-moz-box-sizing: inherit;box-sizing: inherit;}
+body{margin: 0;padding: 0;border: 0;overflow: hidden;height: 100%; max-height: 100%; font-size:12px; font-family: '맑은 고딕','돋움','dotum','sans-serif'; }
+img{border:0; text-decoration:none; outline:none;}
+a{width:100%; height:100%;}
+
+/*탑메뉴*/
+div#top{position: fixed;top: 0;bottom: 0; left: 0;width: 100%;height: 65px; display:table-cell; overflow: hidden; background: #252525;color: white;display:inline-block;border-bottom:4px solid #898989;padding:0;margin:0;z-index:200;}
+div#title{margin:16px 0 0 22px; width:319px; float:left;}
+.page{margin:8px 0 0 12px; float:left; font-size:2em; color:#fff; font-weight:700; letter-spacing:-1px; }
+.date{margin:18px 0 0 12px; float:left; width:350; font-size:1.4em; color:#e2e2e2; font-weight:700; letter-spacing:-1px; }
+.logo{margin:23px 17px 0 0; float:right; width:88;}
+
+/*좌측메뉴영역*/
+div#left_sidebar{position: fixed;top: 65px;bottom: 0; left: 0;width: 64px;height: 100%;overflow: auto; background: #2c55aa; display:inline-block;padding:0;margin:0; z-index:10000;}
+div#left_sidebar img{ cursor:pointer;}
+.sidr{display:none;position:absolute;position:fixed;top:65px; left:64px;height:100%;z-index:5;width:400px;overflow-x:none;overflow-y:auto;background:#fff;color:#333;}
+.sidr .sidr-inner{padding:0px}
+.sidr.left{left:-260px;right:auto; z-index:10;}
+
+#left_for{margin:0; padding:0; position:absolute; left:64px; top:132px; display:none; z-index:20000;}
+#left_for ul{margin:0; padding:0; width:100%;}
+#left_for li{list-style-type:none; margin:0; padding:0; width:64px; height:64px; float:left; background:#fff;}
+#left_for li:hover{background:#96daf5; cursor:pointer;}
+
+
+/*우측 지도구분 버튼*/
+#btn_m{position:fixed; width:48px; height:96px; top:80px; left:auto; right:15px; z-index:1000;}
+#btn_m ul{width:100%; padding:0; margin:0; }
+#btn_m ul li{list-style-type:none; padding:0; margin:0; background:#fff; width:100%; height:100%;}
+#btn_m ul li:hover{background:#a8c0ee; cursor:pointer;}
+
+/*슬라이드바 내용*/
+.sidr-class-slider_top{width:100%; height:55px; padding:0; border-bottom:1px solid #ccc;}
+.sidr-class-slider_title{padding:10px 20px; text-align:left; font-size:24px; color:#2c55aa;font-weight:700;letter-spacing:-3px; float:left; }
+.sidr-class-slider_close{width:55px; height:55px; display:inline-block; background:#fff; float:right; text-align:center; }
+.sidr-class-slider_close:hover{background:#e1eef5;}
+.sidr-class-tb_title{margin-top:10px; padding:0px 20px; text-align:left; font-size:20px; color:#333; font-weight:700; letter-spacing:-2px;}
+.sidr-class-tb_wrapper{width:100%; margin-top:10px; padding:0px 20px;}
+.sidr-class-tg {width:100%; border-collapse:collapse;border-spacing:0;border-color:#ccc;border-top:3px solid #ccc; border-bottom:3px solid #ccc;}
+.sidr-class-tg td{padding:5px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#666;background-color:#fff;border-top-width:1px;border-bottom-width:1px; vertical-align:top; text-align:center; }
+.sidr-class-tg th{font-weight:normal;padding:5px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#e1eef5;border-bottom-width:1px;font-weight:700; text-align:center;}
+.sidr-class-tg .sidr-class-gbg{background-color:#f9f9f9;}
+.sidr-class-name{font-weight:700; border-right:1px solid #ccc !important;}
+.sidr-class-Lh63{line-height:63px;}
+
+
+/*본문영역*/
+#con{ position:fixed;top: 65px; left: 64px;right: 0;bottom: 0;overflow: auto; background: #333; padding:0; margin:0; width:100%;height: 100%;}
+#map{width:100%;height:100%;}
+
+
+/*지도 스타일*/
+.label {margin-bottom: 0px;  width:100%; .width:80px;/*ie6,7*/}
+.label ul{width:100%; height:100%; padding:0; margin:0;}
+.label ul li{width:100%; padding:0; margin:0; list-style-type:none; text-align:center; float:left;}
+.label * {display: inline-block;vertical-align: top;}
+.label .left {}
+.label .center {border: 2px solid #2c55aa; display: inline-block;height: 24px;font-size: 12px;line-height: 24px; font-weight:bold; background-color:#fff; padding:0px 8px; width:100%;}
+.label .right {}
+
+/*예보 팝업*/
+.fore_tt{position:absolute; margin:300px; padding:0; width:345px; height:148px; z-index:2;}
+.fore_tt_top{padding:0; background:#2c3548; margin:0;width:345px; height:50px;display:table-cell; overflow:hidden; -webkit-border-radius:8px 8px 0 0; -moz-border-radius:8px 8px 0 0; border-radius:8px 8px 0 0; behavior:url(pie/PIE.htc);}
+.fore_tt_bot{float:left;padding:0; background:#fff; margin:0;width:100%; height:95px; display:table-cell; -webkit-border-radius:0 0 8px 8px; -moz-border-radius:0 0 8px 8px; border-radius:0 0 8px 8px; behavior: url(pie/PIE.htc);}
+.fore_tt_bot ul{margin:0; padding:0; width:100%; height:100%;}
+.fore_tt_bot ul li{margin:0; padding-top:5px; float:left; width:33.3%; height:95px;list-style-type:none;float:left;text-align:center; display:table-cell; }
+.fore_tt_pointer{float:left;width:8px; height:8px; background:url(../images/fore_tt_pointer.png); margin-left:100px;}
+
+.fore_tt_white{color:#fff; font-weight:700; font-size:16px;float:left;margin:7px 0 0px 15px;text-align:left;}
+.fore_tt_gray{position:absolute; top:28px; left:15px; color:#cccbcb; font-weight:100; font-size:11px; text-align:left;}
+.fore_tt_yellow{color:#f6b656; font-weight:700; font-size:16px;float:right;text-align:right;margin:14px 0 0 10px;}
+.fore_tt_top_icon{float:right; width:30px; height:30px; margin:8px 15px 0 5px;}
+.fore_tt_bot_icon{float:left;width:30px; height:30px; margin:0px 10px 0px 19px;}
+.fore_tt_bot_temp{float:left; color:#2c3548; font-size:18px; font-weight:700; margin-top:5px; text-align:right;}
+.fore_tt_bot_gray{float:left;color:#666; font-size:12px;font-weight:100;text-align:center; line-height:14px; width:100%;}
+.fore_tt_bot_time{float:left; color:#3c7cad; font-size:11px; font-weight:700; margin: 5px 0 0 0; text-align:center; line-height:14px; width:100%;}
+
+/*툴팁*/
+.tooltip{position:absolute; margin:500px 0 0 200px; padding:0; width:100%; z-index:2; width:130px;}
+.tooltip ul{width:100%; height:100%; padding:0; margin:0;}
+.tooltip ul li{width:100%; padding:0; margin:0; list-style-type:none; text-align:center; float:left;}
+.tooltip_top{width:120px; height:30px; margin:0; padding:0 3px 0 0; font-size:14px; color:#fff; font-weight:700; text-align:right; line-height:30px; -webkit-border-radius:5px 5px 0 0; -moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0; }
+.tooltip_val{font-size:24px; color:#333; font-weight:700; background:#fff; height:40px; text-align:center; line-height:40px; width:100%; font-family:'arial';}
+.tooltip_val img{padding:3px 5px 3px 0; .padding:3px 3px 0 6px; .float:left;/*ie6,7*/}
+.tooltip_time{width:100%; font-family:'돋움', dotum;  font-size:11px; color:#666; background:#fff; font-weight:100; height:22px; line-height:22px; padding:0 3px; border-top:1px solid #ccc; -webkit-border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; border-radius:0 0 5px 5px;}
+
+.t_weather{background:url(../images/bg_tt_01.png) no-repeat;}
+.t_snow{background:url(../images/bg_tt_02.png) no-repeat;}
+.t_rain{background:url(../images/bg_tt_03.png) no-repeat;}
+.t_temp{background:url(../images/bg_tt_04.png) no-repeat;}
+.t_water{background:url(../images/bg_tt_05.png) no-repeat;}
+.t_wind{background:url(../images/bg_tt_06.png) no-repeat;}
+
+/*컨트롤러*/
+.cont{position:fixed; left:auto; top:80px; right:80px; width:460px; height:40px; background:url(../images/cont_bg.png) no-repeat; display:table-cell; padding:0; margin:0; z-index:1000;}
+.cont ul{margin:0; padding:0; width:100%; height:100%;}
+.cont ul li{margin:0; padding-left:12px; float:left; list-style-type:none;}
+.cont ul li img{margin:8px 5px 0 0; cursor:pointer;}
+.cont_title{color:#fff; font-size:11px; font-weight:700; text-align:right; line-height:40px;}
+.cont_play{width:290px; height:40px; display:table-cell; margin:0; padding:8px 0 0 0;}
+.cont_bar{width:290px; height:11px; margin:0; padding:0; float:left; line-height:11px; color:#a3e5fd;}
+.cont_bar ul{margin:0; padding:0; width:100%; height:100%;}
+.cont_bar ul li{width:12.5%; text-align:center !important; padding:3px 0 0 0!important; color:#ccc;}
+.cont_hl{font-weight:700 !important; color:#fff !important;}
+
+/*태풍범례*/
+.legend_tp{position:fixed; width:322px; height:49px; top:auto; left:auto; right:15px; bottom:15px; z-index:1000;}
