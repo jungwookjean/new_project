@@ -2,7 +2,7 @@
 <!--레프트 현황 펼침메뉴 스크립트-->
 
 <script type="text/javascript" src="js/common.js"></script>
-<!--슬라이딩메뉴 스크립트 77end-->
+<!--슬라이딩메뉴 스크립트 1end-->
 </head>
 <body>
 <div id="wrapper">
